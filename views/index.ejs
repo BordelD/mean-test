@@ -5,6 +5,7 @@
     <link rel='stylesheet' href='/css/style.css' />
     <script src="/js/script.js"></script>
   </head>
+
   <body  ng-app="crudnode" ng-controller="IndexController">
     <h1>CRUD NODE JS</h1>
     <table class="table table-hover">
@@ -15,15 +16,15 @@
       </tr>
       <tr data-ng-repeat="character in charactersList">
         <th><input type="text" placeholder="Name" data-ng-model="character.name"></th>
-        <th><input type="text" placeholder="Name" data-ng-model="character.tvShow"></th>
-        <th><a>update</a></th>
-        <th><a>delete</a></th>
+        <th><input type="text" placeholder="Name" data-ng-model="character.tvshowName"></th>
+        <th><button data-ng-click="update(character)">Update</button></th>
+        <th><button data-ng-click="delete(character._id)">delete</button></th>
       </tr>
       <tr>
-        <th><input type="text" placeholder="Name"></th>
-        <th><input type="text" placeholder="tvShow"></th>
-        <th><a>save</a></th>
-        <th><a>reset</a></th>
+        <th><input type="text" ng-model="name" name="name" placeholder="Name" /></th>
+        <th><input type="text" ng-model="tvshowName" name="tvshowName" placeholder="tvShow" /></th>
+        <th><button data-ng-click="create()">Save</button></th>
+        <th><button data-ng-click="reset()">Reset</button></th>
       </tr>
     </table>
   </body>

@@ -6,8 +6,8 @@ var schema = new mongoose.Schema(
         name : {
             type: String
         },
-        tvShow : {
-            type: String
+        tvshowName : {
+        	type: String
         }
     }
 );
